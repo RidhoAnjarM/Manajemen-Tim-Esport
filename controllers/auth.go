@@ -96,9 +96,3 @@ func Login(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"token": token})
 }
-
-// GetProfile handler
-func GetProfile(c *gin.Context) {
-	user := c.MustGet("user").(models.User)
-	c.JSON(http.StatusOK, user)
-}
